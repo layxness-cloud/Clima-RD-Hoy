@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clima - Clima RD Hoy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">Clima RD Hoy</a>
+      <div class="nav-links" aria-label="Menu principal">
+        <a href="index.html">Inicio</a>
+        <a href="pagina-clima.html">Clima</a>
+        <a href="index.html#consejos">Consejos</a>
+        <a href="index.html#contacto">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="weather-hero">
+      <div>
+        <p class="eyebrow">API externa</p>
+        <h1>Clima completo de Santo Domingo</h1>
+        <p>
+          Consulta temperatura actual, viento, nubosidad, condicion del cielo y
+          probabilidad de lluvia para manana.
+        </p>
+      </div>
+    </section>
+
+    <section class="section weather-page" id="clima">
+      <div class="section-heading">
+        <p class="eyebrow">Datos en vivo</p>
+        <h2>Resumen actual</h2>
+      </div>
+
+      <div class="weather-panel" data-testid="weather-panel">
+        <div class="weather-title-row">
+          <div>
+            <p class="weather-label">Ciudad</p>
+            <h3>Santo Domingo</h3>
+          </div>
+          <p id="api-message" class="api-message">Solicitando informacion desde Open-Meteo.</p>
+        </div>
+
+        <div class="weather-grid">
+          <article>
+            <span>Temperatura</span>
+            <strong id="temperature">Cargando...</strong>
+          </article>
+          <article>
+            <span>Viento</span>
+            <strong id="wind">Cargando...</strong>
+          </article>
+          <article>
+            <span>Nubosidad</span>
+            <strong id="cloud-cover">Cargando...</strong>
+          </article>
+          <article>
+            <span>Condicion</span>
+            <strong id="condition">Cargando...</strong>
+          </article>
+          <article>
+            <span>Alerta actual</span>
+            <strong id="weather-alert">Calculando...</strong>
+          </article>
+          <article>
+            <span>Estado API</span>
+            <strong id="api-status">Cargando...</strong>
+          </article>
+        </div>
+      </div>
+
+      <div class="forecast-grid">
+        <article class="forecast-card">
+          <span>Manana</span>
+          <h3 id="tomorrow-rain">Cargando...</h3>
+          <p>Probabilidad maxima de lluvia.</p>
+        </article>
+        <article class="forecast-card">
+          <span>Temperatura manana</span>
+          <h3 id="tomorrow-temp">Cargando...</h3>
+          <p>Rango estimado de temperatura.</p>
+        </article>
+        <article class="forecast-card">
+          <span>Recomendacion</span>
+          <h3 id="recommendation">Cargando...</h3>
+          <p id="daily-summary">Analizando los datos del clima.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Practica General RA3.7 - Evaluacion de calidad de un sitio web</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
